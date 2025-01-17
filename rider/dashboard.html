@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OrderXpress Rider Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+
+<body>  
+ 
+<div class="resp_nav">
+    <nav class="navbar navbar-fixed-top">    
+        <a href="../index.html" class="brand_photo"> <img src="../img/logo.png"> </a> 
+        <div class="navbar-right">
+            <button onclick="openNav()" class="menu_btn" id="open"> <img src="../img/menu-bar.png"> </button> 
+            <button onclick="closeNav()" class="menu_btn" id="close"> <img src="../img/close.png"> </button> 
+        </div>
+    </nav>
+    <div id="mySidenav" class="links"> 
+        <div class="container">
+            <li class="active"><a href="dashboard.html"><span class="fas fa-igloo"></span> Dashboard</a></li> 
+            <li><a href="delivery-history.html"><span class="fas fa-biking"></span> History</a></li>  
+            <li><a href="rider-profile.html"><span class="far fa-user"></span> Me</a></li>
+        </div>
+    </div>
+</div>
+
+
+<div class="main-view">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <a href="../index.html"> <img src="../img/logo.png"> </a>
+            </ul>
+            <ul class="nav navbar-nav desk-links">
+                <li class="active"><a href="dashboard.html"><span class="fas fa-igloo"></span> Dashboard</a></li>    
+                <li><a href="delivery-history.html"><span class="fas fa-biking"></span> History</a></li>  
+                <li><a href="rider-profile.html"><span class="far fa-user"></span> Me</a></li> 
+            </ul> 
+        </div>    
+    </nav>
+</div>
+
+
+
+<div class="dashboard">
+    <div class="container">
+        <div class="dash-head">    
+            <h1>Rider dashboard</h1>
+            <p><img src="../img/user.jpg"> Hello, Rider name </p> 
+        </div>
+        
+        <div class="col-sm-6 earnings">
+            <h3>Earnings so far</h3>
+            <h1>&#8358;0.00</h1>
+        </div>
+
+        <div class="col-sm-6 order-div">
+            <h3>Customer orders</h3>
+            <div class="new-order-list">    
+                <table class="table">
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Name</th>
+                        <th>Date</th> 
+                        <th>Time</th>
+                    </tr>
+                    <tr class="new-order" onclick="window.location.href='view-order.html'">
+                        <td class="truncate">JH-2354</td>
+                        <td class="truncate">Tobechukwu Alias</td>
+                        <td class="truncate">04/02/2025</td>
+                        <td class="truncate">Now</td>
+                    </tr>
+                    <tr class="new-order" onclick="window.location.href='view-order.html'">
+                        <td class="truncate">JH-2354</td>
+                        <td class="truncate">Tobechukwu Alias</td>
+                        <td class="truncate">04/02/2025</td>
+                        <td class="truncate">5 mins ago</td>
+                    </tr>
+                    <tr class="new-order" onclick="window.location.href='view-order.html'">
+                        <td class="truncate">JH-2354</td>
+                        <td class="truncate">Tobechukwu Alias</td>
+                        <td class="truncate">04/02/2025</td>
+                        <td class="truncate">1 hr ago</td>
+                    </tr>
+                    <tr class="new-order" onclick="window.location.href='view-order.html'">
+                        <td class="truncate">JH-2354</td>
+                        <td class="truncate">Tobechukwu Alias</td>
+                        <td class="truncate">04/02/2025</td>
+                        <td class="truncate">1 hr ago</td>
+                    </tr>
+                    <tr class="new-order" onclick="window.location.href='view-order.html'">
+                        <td class="truncate">JH-2354</td>
+                        <td class="truncate">Tobechukwu Alias</td>
+                        <td class="truncate">04/02/2025</td>
+                        <td class="truncate">1 hr ago</td>
+                    </tr>
+                </table> 
+
+                <div class="view-more">
+                    <a href="order-history.html">View more <span class="fas fa-angle-right"></span></a>
+                </div>
+            </div>
+
+            <div class="banner">
+                <center>
+                    <span class="fas fa-store-slash"></span>
+                    <p>You have not recieved any orders</p>
+                </center>
+            </div>
+        </div>
+
+
+            
+    </div>
+</div> 
+
+
+<script type="text/javascript">
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+      document.getElementById('close').style.display = "block";
+      document.getElementById('open').style.display = "none"; 
+    }
+
+    /* Set the width of the side navigation to 0 */
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById('close').style.display = "none";
+      document.getElementById('open').style.display = "block";
+    }
+</script> 
+  
+<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script> 
+<script type="text/javascript" src="../js/index.js"></script> 
+</body>
+</html>    

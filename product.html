@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OrderXpress Product</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">>
+</head>
+
+<body>  
+ 
+<div class="resp_nav">
+    <nav class="navbar navbar-fixed-top">    
+        <a href="index.html" class="brand_photo"> <img src="img/logo.png"> </a> 
+        <div class="navbar-right">
+            <ul class="search-shop">
+                <li><a><button><span class="fas fa-search" onclick="showSearch()"></span></button></a></li>
+                <li><a href="login.html"><span class="fas fa-user-plus"></span></a></li>
+                <li><a href="cart.html"><span class="fas fa-shopping-bag"></span></a></li>
+            </ul>
+            <button onclick="openNav()" class="menu_btn" id="open"> <img src="img/menu-bar.png"> </button> 
+            <button onclick="closeNav()" class="menu_btn" id="close"> <img src="img/close.png"> </button> 
+        </div>
+    </nav>
+    <div id="mySidenav" class="links"> 
+        <div class="container">
+            <li><a href="index.html"><span class="fas fa-hamburger"></span> Menu</a></li>    
+            <li><a href="restaurants.html"><span class="fas fa-utensils"></span> Restaurants</a></li>
+            <li><a href="supermarkets.html"><span class="fas fa-store"></span> Supermarkets</a></li> 
+            <li><a href="profile.html"><span class="far fa-user"></span> Me</a></li>
+        </div>
+    </div>
+</div>
+
+
+<div class="main-view">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <a href="index.html"> <img src="img/logo.png"> </a>
+            </ul>
+            <ul class="nav navbar-nav desk-links">
+                <li><a href="index.html"><span class="fas fa-hamburger"></span> Menu</a></li>    
+                <li><a href="restaurants.html"><span class="fas fa-utensils"></span> Restaurants</a></li> 
+                <li><a href="supermarkets.html"><span class="fas fa-store"></span> Supermarkets</a></li>
+                <li><a href="profile.html"><span class="far fa-user"></span> Me</a></li> 
+            </ul> 
+            <ul class="nav navbar-nav navbar-right">
+                <li><a><button><span class="fas fa-search" onclick="showSearch()"></span></button></a></li>
+                <li><a href="login.html"><span class="fas fa-user-plus"></span></a></li>
+                <li><a href="cart.html"><span class="fas fa-shopping-bag"></span></a></li>
+            </ul>
+        </div>    
+    </nav>
+</div>
+
+
+<div class="search-field" id="searchField">
+    <center> 
+        <form>
+            <input type="search" name="" placeholder=" Food, drinks, restaurants etc"> 
+        </form>
+    </center>
+</div>
+
+<div class="container product">
+    <button onclick="history.back()"> <span class="fas fa-angle-left"></span> Back </button>
+</div>
+ 
+
+<div class="container detail">
+    <div class="row">
+        <div class="col-sm-5">
+            <img src="img/mac.jpg" class="img-responsive">
+        </div>
+        <div class="col-sm-7">
+            <h3>Smokey Jollof rice </h3>
+            <p class="product-location"> <span class="fas fa-map-marker-alt"></span> Chicken republic - Ikenegbu</p>
+            <h3>&#8358;7,500</h3>
+            <p class="product-location"> <span class="fas fa-clock"></span> 10 - 20 mins</p>
+            <form>
+                <div class="product-detail">    
+                    <li><span class="fas fa-angle-down" onclick="decrease()"></span></li>
+                    <li><input type="number" id="myNumber" value="1"></li>  
+                    <li><span class="fas fa-angle-up" onclick="increase()"></span></li> 
+                </div>
+                <button type="submit">Add to cart <span class="fas fa-shopping-bag"></span></button>
+            </form>
+            <h4>Details</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>   
+</div>   
+ 
+
+
+<div class="container product-extra">
+    <div class="row extra-header">
+        <div class="col-xs-6">
+            <p>More from Chicken Republic - Ikenegbu</p>
+        </div>
+        <div class="col-xs-6">
+            <a href="restaurant-menu.html">View more <span class="fas fa-angle-right"></span></a>
+        </div>
+    </div>
+    <div class="extra-items">
+        <a href="product.html">    
+            <div class="extra-card">
+                <img src="img/ck.jpg">
+                <h4>Small pet coke</h4>
+                <p>&#8358;450</p>
+            </div>
+        </a>  
+
+        <a href="product.html">    
+            <div class="extra-card">
+                <img src="img/ck.jpg">
+                <h4>Small pet coke</h4>
+                <p>&#8358;450</p>
+            </div>
+        </a>  
+
+        <a href="product.html">    
+            <div class="extra-card">
+                <img src="img/ck.jpg">
+                <h4>Small pet coke</h4>
+                <p>&#8358;450</p>
+            </div>
+        </a>  
+
+          <a href="product.html">    
+            <div class="extra-card">
+                <img src="img/ck.jpg">
+                <h4>Small pet coke</h4>
+                <p>&#8358;450</p>
+            </div>
+        </a>  
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="container">
+        <div class="col-sm-6">
+            <img src="img/logo.png">
+        </div>
+        <div class="col-sm-3">
+            <h4>QUICK LINKS</h4>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="mailto:binvabian@gmail.com">Email us</a></li>
+        </div>
+        <div class="col-sm-3">
+            <h4>LOCATIONS</h4> 
+            <li>Owerri</li>
+            <li>Coming soon to other states</li> 
+        </div>
+    </div>
+    <center>
+        <p>&copy; 2024, FoodXpress</p>
+    </center>
+</div>
+
+
+<script type="text/javascript">
+
+    function increase() {
+      document.getElementById("myNumber").stepUp(1);
+    }
+
+    function decrease() {
+      if (document.getElementById("myNumber").value==="0") {
+        document.getElementById("myNumber").stepDown(0);
+      } 
+      else {
+        document.getElementById("myNumber").stepDown(1);
+      }
+    }
+
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+      document.getElementById('close').style.display = "block";
+      document.getElementById('open').style.display = "none"; 
+    }
+
+    /* Set the width of the side navigation to 0 */
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById('close').style.display = "none";
+      document.getElementById('open').style.display = "block";
+    }
+</script> 
+  
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/index.js"></script> 
+</body>
+</html>    

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OrderXpress Rider Register</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>  
+ 
+<div class="login">
+    <center><a href="index.html"><img src="img/logo.png"></a></center>
+    <div class="log-box">
+        <center>
+            <h3>Register as a rider</h3>
+            <p>Pick and deliver orders, earn as you go</p>
+        </center>
+        <form>
+            <li><input type="text" placeholder="Full name *"></li>
+            <li><input type="email" placeholder="Email *"></li>
+            <li><input type="text" placeholder="Phone number *"></li>
+            <li><input type="text" placeholder="Home address *"></li>
+            <li><input type="password" placeholder="Password *"></li>  
+            <li>
+                <span>Upload display picture *</span>
+                <button type="button" id="uploadTrigger" class="upload-btn">Select</button>
+                <input type="file" name="" id="pfp" accept="image/*">
+            </li>
+            <img id="preview" src="" alt="Profile Picture Preview" style="display: none;">
+            <li><button type="submit">Get started</button></li>
+        </form> 
+    </div>
+    <div class="reg-options">
+        <center><p>Have an account? <a href="login.html">Login here</a></p></center>
+    </div>
+</div>
+
+
+<script>
+    // JavaScript to trigger the file manager
+    document.getElementById("uploadTrigger").addEventListener("click", function () {
+      document.getElementById("pfp").click();
+    });
+
+    // JavaScript to display live preview of selected image
+    document.getElementById("pfp").addEventListener("change", function (event) {
+      const file = event.target.files[0]; // Get the selected file
+      if (file) {
+        const reader = new FileReader();
+
+        // Set up the FileReader to display the image
+        reader.onload = function (e) {
+          const preview = document.getElementById("preview");
+          preview.src = e.target.result; // Set the image source to the selected file
+          preview.style.display = "block"; // Show the image preview
+        };
+
+        reader.readAsDataURL(file); // Convert the file to a data URL for preview
+      }
+    });
+  </script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>  
+</body>
+</html>    
